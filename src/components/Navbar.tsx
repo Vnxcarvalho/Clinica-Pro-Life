@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
+import logoHeader from "@/assets/logo-header.jpg";
 
 const WHATSAPP_LINK = "https://wa.me/5596991626261?text=Olá! Gostaria de agendar uma consulta.";
 
@@ -21,8 +22,8 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
       <nav className="container mx-auto flex items-center justify-between h-16 px-4">
-        <a href="#inicio" className="font-display text-xl font-bold text-primary">
-          Clínica Pro-Life
+        <a href="#inicio" className="flex items-center gap-2">
+          <img src={logoHeader} alt="Logo Clínica Pro-Life" className="h-10" />
         </a>
 
         {/* Desktop */}

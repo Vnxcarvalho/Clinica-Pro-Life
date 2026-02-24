@@ -1,38 +1,41 @@
 import { Card, CardContent } from "@/components/ui/card";
 import AnimatedSection from "./AnimatedSection";
-import { User } from "lucide-react";
+import draRafaele from "@/assets/dra-rafaele.jpg";
+import draGessica from "@/assets/dra-gessica.png";
 
 const team = [
   {
     name: "Dra. Rafaele Ferreira",
     role: "Fisioterapeuta",
-    register: "CREFITO",
-    desc: "Especialista em fisioterapia ortopédica e esportiva, com foco em reabilitação funcional e técnicas avançadas de tratamento.",
+    register: "CREFITO: 293371.1F",
+    desc: "Pós-graduada em traumato-ortopedia, especializada em tratamento de disfunções da coluna vertebral e instrutora de pilates. Sócia proprietária e administradora da Clínica Pro-Life.",
+    img: draRafaele,
   },
   {
     name: "Dra. Géssica Viana",
     role: "Fisioterapeuta",
-    register: "CREFITO",
-    desc: "Especialista em fisioterapia pélvica e pilates clínico, dedicada ao cuidado integral e individualizado de cada paciente.",
+    register: "CREFITO: 336142.F",
+    desc: "Fisioterapeuta, instrutora de pilates e sócia proprietária da Clínica Pro-Life.",
+    img: draGessica,
   },
 ];
 
 const TeamSection = () => (
-  <section id="equipe" className="py-20 bg-background">
+  <section id="equipe" className="py-20 bg-secondary">
     <div className="container mx-auto px-4">
       <AnimatedSection className="text-center mb-14">
         <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">Nossa Equipe</h2>
-        <p className="text-muted-foreground max-w-xl mx-auto">Profissionais qualificados e dedicados ao seu bem-estar.</p>
+        <p className="text-muted-foreground max-w-xl mx-auto">
+          Somos especialistas em fisioterapia avançada para que você viva o melhor da sua vida sem dores e sem limitações.
+        </p>
       </AnimatedSection>
 
       <div className="grid sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
         {team.map((t) => (
           <AnimatedSection key={t.name}>
             <Card className="overflow-hidden border-border/50 bg-card hover:shadow-lg transition-shadow">
-              <div className="h-48 bg-accent flex items-center justify-center">
-                <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center">
-                  <User className="h-12 w-12 text-primary" />
-                </div>
+              <div className="h-72 overflow-hidden">
+                <img src={t.img} alt={t.name} className="w-full h-full object-cover object-top" loading="lazy" />
               </div>
               <CardContent className="p-6 text-center">
                 <h3 className="font-display font-bold text-lg text-foreground">{t.name}</h3>
