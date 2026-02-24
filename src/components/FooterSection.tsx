@@ -1,4 +1,5 @@
-import { MapPin, Phone, Clock, MessageCircle } from "lucide-react";
+import { MapPin, Phone, MessageCircle } from "lucide-react";
+import logoFooter from "@/assets/logo-footer.png";
 
 const WHATSAPP_LINK = "https://wa.me/5596991626261?text=Olá! Gostaria de agendar uma consulta.";
 
@@ -7,9 +8,9 @@ const FooterSection = () => (
     <div className="container mx-auto px-4">
       <div className="grid md:grid-cols-3 gap-10">
         <div>
-          <h3 className="font-display text-2xl font-bold text-primary mb-4">Clínica Pro-Life</h3>
+          <img src={logoFooter} alt="Logo Clínica Pro-Life" className="w-40 mb-4" loading="lazy" />
           <p className="text-primary-foreground/70 text-sm leading-relaxed">
-            Cuidando da sua saúde com excelência, tecnologia e um olhar humano.
+            Somos especialistas em fisioterapia avançada para que você viva o melhor da sua vida sem dores e sem limitações.
           </p>
         </div>
 
@@ -17,12 +18,16 @@ const FooterSection = () => (
           <h4 className="font-display font-semibold text-lg mb-4">Contato</h4>
           <div className="flex items-start gap-3 text-sm text-primary-foreground/80">
             <MapPin className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-            <span>Rua Euclides Rodrigues 1305, Nova Basília</span>
+            <div>
+              <span>Rua Euclides Rodrigues 1305</span><br />
+              <span>Bairro: Nova Basília</span>
+            </div>
           </div>
           <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-primary-foreground/80 hover:text-primary transition-colors">
             <Phone className="h-4 w-4 text-primary flex-shrink-0" />
             (96) 99162-6261
           </a>
+          <p className="text-xs text-primary-foreground/50">CNPJ: 51.729.183/0001-11</p>
         </div>
 
         <div>
@@ -44,6 +49,7 @@ const FooterSection = () => (
 
       <div className="mt-12 pt-6 border-t border-primary-foreground/10 text-center text-xs text-primary-foreground/50">
         <p>© {new Date().getFullYear()} Clínica Pro-Life. Todos os direitos reservados.</p>
+        <p className="mt-1">Atenção: Não atendemos convênio</p>
       </div>
     </div>
 

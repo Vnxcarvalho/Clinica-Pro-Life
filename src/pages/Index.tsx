@@ -5,6 +5,7 @@ import FisioterapiaSection from "@/components/FisioterapiaSection";
 import TechniquesSection from "@/components/TechniquesSection";
 import PilatesSection from "@/components/PilatesSection";
 import AestheticsSection from "@/components/AestheticsSection";
+import SpaceSection from "@/components/SpaceSection";
 import TeamSection from "@/components/TeamSection";
 import FooterSection from "@/components/FooterSection";
 
@@ -18,6 +19,7 @@ const Index = () => (
       <TechniquesSection />
       <PilatesSection />
       <AestheticsSection />
+      <SpaceSection />
       <TeamSection />
     </main>
     <FooterSection />
